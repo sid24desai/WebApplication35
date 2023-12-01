@@ -46,6 +46,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: .net-app
+          
+      - name: Print Google Application Credentials
+        run: echo ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
