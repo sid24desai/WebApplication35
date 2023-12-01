@@ -47,8 +47,8 @@ jobs:
         with:
           name: .net-app
           
-      - name: Echo Google Application Credentials Secret
-        run: echo  ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}"
+      - name: Print Google Application Credentials
+        run: echo ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
